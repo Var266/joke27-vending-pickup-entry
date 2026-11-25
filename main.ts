@@ -1,11 +1,15 @@
 import { writeFileSync, mkdirSync } from "node:fs";
 
-// make.fun re-entry: One Line, One Minute — The Vending Machine Pickup Line Contest
-// v2 line, stronger than v1. Joke: the snack is stuck in the coil AND the
-// machine is stuck on the human — "press me and I'll finally let go"
-// releases both at once.
+// make.fun re-entry v3: One Line, One Minute — The Vending Machine Pickup
+// Line Contest. v2 (R2 853/2932) leaned on one double meaning (stuck/let
+// go). v3 stacks two: the OUT OF ORDER sign re-read as "not broken, just
+// lovestruck," plus the stuck coil released by one press into "drop
+// everything" — machine voice, machine world, and end-punch in one breath.
+// Chosen pairwise from 12 candidates; see CANDIDATES.md.
+// Verified locally: `node main.ts` prints the line and writes it to
+// /output/entry.txt; 85 characters, inside the 1-200 gate.
 const line =
-  "My coil's been stuck on you since Tuesday — press me and I'll finally let go.";
+  "I'm not out of order, I'm just stuck on you — press me once and I'll drop everything.";
 
 // Gate guard: the sealed scorer only accepts 1-200 non-whitespace chars.
 const chars = [...line].length;
